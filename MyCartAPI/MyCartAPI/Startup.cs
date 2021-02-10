@@ -23,7 +23,7 @@ namespace MyCartAPI {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MyCartAPI", Version = "v1" });
             });
 
-            services.AddDbContext<CartDetailContext>(options => options.UseSqlServer(Configuration.GetConnectionString("")));
+            services.AddDbContext<CartDetailContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DevConnetcion")));
         }
 
         // This method gets caflled by the runtime. Use this method to configure the HTTP request pipeline.
