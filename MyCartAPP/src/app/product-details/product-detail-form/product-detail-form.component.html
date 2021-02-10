@@ -3,14 +3,17 @@
     [value]="service.formData.productDetailId" />
     <div class="form-group">
         <label>PRODUCT NAME</label>
-        <input class="form-control form-control-lg" placeholder="Name of the Product">
+        <input class="form-control form-control-lg" placeholder="Name" name="nameProduct" #nameProduct="ngModel" [(ngModel)]="service.formData.nameProduct" 
+        required[class.invalid]="nameProduct.invalid && nameProduct.touched">
     </div>
     <div class="form-group">
         <label>PRODUCT CODE</label>
-        <input class="form-control form-control-lg" placeholder="Code of the Product">
+        <input class="form-control form-control-lg" placeholder="Code" name="codeProduct" #codeProduct="ngModel" [(ngModel)]="service.formData.codeProduct"
+        required maxlength="10" minlength="10" [class.invalid]="codeProduct.invalid && codeProduct.touched">>
     </div>
     <div class="form-group">
         <label>PRODUCT PRICE</label>
-        <input class="form-control form-control-lg" placeholder="Price of the Product">
+        <input class="form-control form-control-lg" placeholder="Price" name="priceProduct" #priceProduct="ngModel" [(ngModel)]="service.formData.priceProduct"
+        required[class.invalid]="priceProduct.invalid && priceProduct.touched">>
     </div>
 </form>
