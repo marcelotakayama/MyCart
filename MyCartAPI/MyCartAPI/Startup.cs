@@ -22,7 +22,7 @@ namespace MyCartAPI {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MyCartAPI", Version = "v1" });
             });
 
-            services.AddDbContext<CartDetailContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DevConnetcion")));
+            services.AddDbContext<CartDetailContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
