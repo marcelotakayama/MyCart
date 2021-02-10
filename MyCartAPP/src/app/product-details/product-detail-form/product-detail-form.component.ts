@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductDetailService } from 'src/app/shared/product-detail.service';
 
 @Component({
   selector: 'app-product-detail-form',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductDetailFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(public service:ProductDetailService) { }
 
   ngOnInit(): void {
   }
